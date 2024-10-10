@@ -2,4 +2,7 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-print "Hello";
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../');
+$dotenv->load();
+
+print env('APP_NAME');

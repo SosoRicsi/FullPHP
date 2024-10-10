@@ -3,7 +3,8 @@
 	"description": "A simple php framwork for APIs. Please don't use it, this isn't 100% secure.",
 	"license": "MIT",
 	"require": {
-		"illuminate/database": "^11.27"
+		"illuminate/database": "^11.27",
+		"vlucas/phpdotenv": "^5.6"
 	},
 	"autoload": {
 		"files": [

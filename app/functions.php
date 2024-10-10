@@ -7,7 +7,7 @@
 
 
 if (!defined("ROOT_DIR")) {
-	define("ROOT_DIR", __DIR__.'/../');
+	define("ROOT_DIR", __DIR__ . '/../');
 }
 
 if (!defined("APP_DIR")) {
