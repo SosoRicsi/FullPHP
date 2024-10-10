@@ -1,5 +1,5 @@
 {
-	"name": "API.php",
+	"name": "sosoricsi/api.php",
 	"description": "A simple php framwork for APIs. Please don't use it, this isn't 100% secure.",
 	"require": {
 		"illuminate/database": "^11.27"
