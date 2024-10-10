@@ -1,6 +1,7 @@
 {
 	"name": "sosoricsi/api.php",
 	"description": "A simple php framwork for APIs. Please don't use it, this isn't 100% secure.",
+	"license": "MIT",
 	"require": {
 		"illuminate/database": "^11.27"
 	},
