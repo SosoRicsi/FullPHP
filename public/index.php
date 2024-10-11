@@ -2,24 +2,22 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
+use SosoRicsi\JWT\JWT;
+
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../');
 $dotenv->load();
 
-$jwt = new SosoRicsi\JWT\JWT(env('SECRET_KEY'));
+JWT::setKey(env('SECRET_KEY'));
 
 $payload = [
 	'username' => "SosoRicsi"
 ];
 
-$token = $jwt->encode($payload);
-
-print $token;
-
-$decoded = $jwt->decode($token);
+print $token = JWT::encode($payload);
 
 print "\n";
 
 print "<pre>";
-print_r($decoded);
+print_r(JWT::decode($token));
 
-$jwt->reset();
+JWT::reset();

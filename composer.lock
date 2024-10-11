@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "173bd54f831a5c82feef78ffca62306d",
+    "content-hash": "61064e794dde621d1287e901831b18d9",
     "packages": [
         {
             "name": "brick/math",
@@ -290,7 +290,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v11.27.1",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -345,7 +345,7 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v11.27.1",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -391,7 +391,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v11.27.1",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -442,7 +442,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v11.27.1",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -490,7 +490,7 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v11.27.1",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
@@ -559,7 +559,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v11.27.1",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -605,7 +605,7 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v11.27.1",
+            "version": "v11.27.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -1014,16 +1014,16 @@
         },
         {
             "name": "sosoricsi/jwt",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SosoRicsi/JWT.git",
-                "reference": "6fe837f0ff8b8685fbd4c672ea8b1a54d2046a98"
+                "reference": "09a3ec682f1c73fbc5ccf9665e5a17b40bac0534"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SosoRicsi/JWT/zipball/6fe837f0ff8b8685fbd4c672ea8b1a54d2046a98",
-                "reference": "6fe837f0ff8b8685fbd4c672ea8b1a54d2046a98",
+                "url": "https://api.github.com/repos/SosoRicsi/JWT/zipball/09a3ec682f1c73fbc5ccf9665e5a17b40bac0534",
+                "reference": "09a3ec682f1c73fbc5ccf9665e5a17b40bac0534",
                 "shasum": ""
             },
             "type": "project",
@@ -1045,9 +1045,9 @@
             "description": "A JWT system with php.",
             "support": {
                 "issues": "https://github.com/SosoRicsi/JWT/issues",
-                "source": "https://github.com/SosoRicsi/JWT/tree/1.0.0"
+                "source": "https://github.com/SosoRicsi/JWT/tree/1.1.0"
             },
-            "time": "2024-10-11T03:08:13+00:00"
+            "time": "2024-10-11T03:30:22+00:00"
         },
         {
             "name": "symfony/clock",

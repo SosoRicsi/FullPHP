@@ -5,7 +5,7 @@
 	"require": {
 		"illuminate/database": "^11.27",
 		"vlucas/phpdotenv": "^5.6",
-		"sosoricsi/jwt": "^1.0"
+		"sosoricsi/jwt": "^1.1"
 	},
 	"autoload": {
 		"files": [
