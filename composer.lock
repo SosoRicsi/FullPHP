@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3af0ff2eca407d159f64cae61a3d1002",
+    "content-hash": "173bd54f831a5c82feef78ffca62306d",
     "packages": [
         {
             "name": "brick/math",
@@ -1011,6 +1011,43 @@
                 "source": "https://github.com/php-fig/simple-cache/tree/3.0.0"
             },
             "time": "2021-10-29T13:26:27+00:00"
+        },
+        {
+            "name": "sosoricsi/jwt",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SosoRicsi/JWT.git",
+                "reference": "6fe837f0ff8b8685fbd4c672ea8b1a54d2046a98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SosoRicsi/JWT/zipball/6fe837f0ff8b8685fbd4c672ea8b1a54d2046a98",
+                "reference": "6fe837f0ff8b8685fbd4c672ea8b1a54d2046a98",
+                "shasum": ""
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "SosoRicsi\\JWT\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jarkó Richárd",
+                    "email": "jarkoricsi16@gmail.com"
+                }
+            ],
+            "description": "A JWT system with php.",
+            "support": {
+                "issues": "https://github.com/SosoRicsi/JWT/issues",
+                "source": "https://github.com/SosoRicsi/JWT/tree/1.0.0"
+            },
+            "time": "2024-10-11T03:08:13+00:00"
         },
         {
             "name": "symfony/clock",
