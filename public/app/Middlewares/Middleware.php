@@ -9,7 +9,7 @@ class Middleware
 
 	public function handle(\ApiPHP\Http\Request $request, \ApiPHP\Http\Response $response)
 	{
-		if ($request->isMethod('POST')) {
+		if ($request->isMethod('GET')) {
 			return true;
 		}
 
