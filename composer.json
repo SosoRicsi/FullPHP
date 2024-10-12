@@ -14,5 +14,13 @@
 		"psr-4": {
 			"App\\": "public/app/"
 		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+		],
+		"post-update-cmd": [
+			"php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+		]
 	}
 }

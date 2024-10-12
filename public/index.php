@@ -6,6 +6,7 @@ use SosoRicsi\JWT\JWT;
 use ApiPHP\Http\Router;
 use ApiPHP\Http\Request;
 use ApiPHP\Http\Response;
+use App\Middlewares\ApiSecretKey;
 use App\Middlewares\Middleware;
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../')->load();
@@ -14,10 +15,12 @@ JWT::setKey(env('SECRET_KEY'));
 
 $router = new Router;
 
-$router->get('/', function (Request $request, Response $response) {
-	$response->setStatusCode(200)
-			->setBody("Szia")
-			->send();
-}, [Middleware::class]);
+$router->group('/api/', [ApiSecretKey::class], function () use ($router) {
+	$router->get('/', function (Request $request, Response $response) {
+		$response->setStatusCode(200)
+				->setBody("Szia")
+				->send();
+	}, [Middleware::class]);
+});
 
 $router->run();
