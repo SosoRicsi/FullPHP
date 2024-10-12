@@ -5,7 +5,6 @@
  * Made by Jarkó Ricsi
  */
 
-
 if (!defined("ROOT_DIR")) {
 	define("ROOT_DIR", __DIR__ . '/../');
 }

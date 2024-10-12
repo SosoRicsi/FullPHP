@@ -4,8 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61064e794dde621d1287e901831b18d9",
+    "content-hash": "2a981a71b3369abf521c5307b3a52247",
     "packages": [
+        {
+            "name": "apiphp/framework",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SosoRicsi/framework.git",
+                "reference": "8a43db0fb0f636c4822d95c643754bf51d31ee5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SosoRicsi/framework/zipball/8a43db0fb0f636c4822d95c643754bf51d31ee5a",
+                "reference": "8a43db0fb0f636c4822d95c643754bf51d31ee5a",
+                "shasum": ""
+            },
+            "require": {
+                "sosoricsi/jwt": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ApiPHP\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jarkó Richárd",
+                    "email": "jarkoricsi16@gmail.com"
+                }
+            ],
+            "description": "The updateable classes of the API.php framework.",
+            "support": {
+                "issues": "https://github.com/SosoRicsi/framework/issues",
+                "source": "https://github.com/SosoRicsi/framework/tree/0.0.1"
+            },
+            "time": "2024-10-12T07:40:43+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.12.1",
