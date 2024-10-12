@@ -3,9 +3,10 @@
 require __DIR__.'/../vendor/autoload.php';
 
 use SosoRicsi\JWT\JWT;
+use ApiPHP\Http\Router;
 use ApiPHP\Http\Request;
 use ApiPHP\Http\Response;
-use ApiPHP\Http\Router;
+use App\Middlewares\Middleware;
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../')->load();
 
@@ -17,6 +18,6 @@ $router->get('/', function (Request $request, Response $response) {
 	$response->setStatusCode(200)
 			->setBody("Szia")
 			->send();
-});
+}, [Middleware::class]);
 
 $router->run();
