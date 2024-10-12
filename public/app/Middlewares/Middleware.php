@@ -9,11 +9,14 @@ class Middleware
 
 	public function handle(\ApiPHP\Http\Request $request, \ApiPHP\Http\Response $response)
 	{
-		if ($request->isMethod('GET')) {
+		if ($request->isMethod('POST')) {
 			return true;
 		}
 
-		return false;
+		$response->setStatusCode(400)
+				->setBody("Wrong method!")
+				->addHeader('Content-Type', 'application/json')
+				->send();
 	}
 
 }

@@ -15,6 +15,7 @@ class ApiSecretKey
 
 		$response->setStatusCode(403)
 				->setBody("wrong_api_key")
+				->addHeader('Content-Type', 'application/json')
 				->send();
 	}
 
