@@ -1,26 +1,16 @@
 <?php
 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
-use SosoRicsi\JWT\JWT;
 use ApiPHP\Http\Router;
-use ApiPHP\Http\Request;
-use ApiPHP\Http\Response;
-use App\Middlewares\ApiSecretKey;
-use App\Middlewares\Middleware;
+use SosoRicsi\JWT\JWT;
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../')->load();
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../')->load();
 
 JWT::setKey(env('SECRET_KEY'));
 
 $router = new Router;
 
-$router->group('/api/', [ApiSecretKey::class], function () use ($router) {
-	$router->get('/', function (Request $request, Response $response) {
-		$response->setStatusCode(200)
-				->setBody("Szia")
-				->send();
-	}, [Middleware::class]);
-});
+require __DIR__ . '/app/web/routes.php';
 
 $router->run();
