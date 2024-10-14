@@ -1,12 +1,12 @@
 <?php
 
-require __DIR__.'/../../vendor/autoload.php';
+require __DIR__.'/../../../vendor/autoload.php';
 require __DIR__.'/../config/db.php';
 
 use Illuminate\Database\Capsule\Manager;
 
 //Import the migrations
-$migrations = require __DIR__.'/../../public/app/Migrations/migrations.php';
+$migrations = require __DIR__.'/../../public/database/Migrations/migrations.php';
 
 //Check if the migrations table exists
 if (!Manager::schema()->hasTable('migrations')) {

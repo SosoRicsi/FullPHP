@@ -1,6 +1,6 @@
 <?php
 
-use App\Migrations\CreateUsersTable;
+use App\database\Migrations\CreateUsersTable;
 
 return [
 	"UsersTable" => CreateUsersTable::class

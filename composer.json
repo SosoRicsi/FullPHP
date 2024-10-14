@@ -9,10 +9,10 @@
 	},
 	"autoload": {
 		"files": [
-			"app/functions.php"
+			"app/framework/functions.php"
 		],
 		"psr-4": {
-			"App\\": "public/app/"
+			"App\\": "app/public"
 		}
 	},
 	"scripts": {

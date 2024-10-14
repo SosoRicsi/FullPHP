@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Migrations;
+namespace App\database\Migrations;
 require 'vendor/autoload.php';
 
 use Illuminate\Database\Capsule\Manager;
