@@ -6,7 +6,6 @@ use ApiPHP\Http\Response;
 use App\Middlewares\Middleware;
 use App\Middlewares\ApiSecretKey;
 
-
 $router->group('/api', [ApiSecretKey::class], function () use ($router) {
 	$router->get('/create', function (Request $request, Response $response) {
 		$response->setStatusCode(200)
@@ -16,7 +15,8 @@ $router->group('/api', [ApiSecretKey::class], function () use ($router) {
 
 	$router->get('/', function (Request $request, Response $response) {
 		$response->setStatusCode(200)
-			->setBody(JWT::decode($request->getBody('payload')))
+			->addHeader('Content-Type', 'application/json')
+			->setBody(date("Y-m-d H:i:s", JWT::decode($request->getBody('payload'))["exp"]))
 			->send();
 	}, [Middleware::class]);
 });
