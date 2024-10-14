@@ -8,16 +8,16 @@
 	"packages": [
 		{
 			"name": "apiphp/framework",
-			"version": "0.1",
+			"version": "0.2",
 			"source": {
 				"type": "git",
 				"url": "https://github.com/SosoRicsi/framework.git",
-				"reference": "a2b201f08d1ee731a5ef4eafca163dcd9fd3d050"
+				"reference": "7a813de0c92f8060f6b62384f3d59840fcaa72d6"
 			},
 			"dist": {
 				"type": "zip",
-				"url": "https://api.github.com/repos/SosoRicsi/framework/zipball/a2b201f08d1ee731a5ef4eafca163dcd9fd3d050",
-				"reference": "a2b201f08d1ee731a5ef4eafca163dcd9fd3d050",
+				"url": "https://api.github.com/repos/SosoRicsi/framework/zipball/7a813de0c92f8060f6b62384f3d59840fcaa72d6",
+				"reference": "7a813de0c92f8060f6b62384f3d59840fcaa72d6",
 				"shasum": ""
 			},
 			"require": {
@@ -42,9 +42,9 @@
 			"description": "The updateable classes of the API.php framework.",
 			"support": {
 				"issues": "https://github.com/SosoRicsi/framework/issues",
-				"source": "https://github.com/SosoRicsi/framework/tree/0.1"
+				"source": "https://github.com/SosoRicsi/framework/tree/0.2"
 			},
-			"time": "2024-10-14T11:30:43+00:00"
+			"time": "2024-10-14T22:34:01+00:00"
 		},
 		{
 			"name": "brick/math",
