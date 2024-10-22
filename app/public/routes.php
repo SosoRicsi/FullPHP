@@ -7,6 +7,8 @@ use App\Controllers\UserController;
 use App\Middlewares\Middleware;
 use App\Middlewares\ApiSecretKey;
 
+$router->get('/test', [UserController::class, 'call']);
+
 $router->group('/api', [ApiSecretKey::class], function () use ($router) {
 	$router->get('/test', [UserController::class, 'index']);
 

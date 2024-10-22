@@ -22,4 +22,9 @@ class UserController
 			->send();
 	}
 
+	public function call()
+	{
+		require __DIR__.'/../Actions/index.php';
+	}
+
 }
