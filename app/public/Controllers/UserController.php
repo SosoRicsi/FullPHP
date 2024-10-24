@@ -24,7 +24,9 @@ class UserController
 
 	public function call()
 	{
-		require __DIR__.'/../Actions/index.php';
+		if (true != false) {
+			print true;
+		}
 	}
 
 }
