@@ -1,15 +1,20 @@
 <?php
 
+use ApiPHP\Additionals\Collection;
 use SosoRicsi\JWT\JWT;
 use ApiPHP\Http\Request;
 use ApiPHP\Http\Response;
+use ApiPHP\Http\Router;
 use App\Controllers\UserController;
 use App\Middlewares\Middleware;
 use App\Middlewares\ApiSecretKey;
 
-$router->get('/test', [UserController::class, 'call']);
+$router = new Router;
 
-$router->group('/api', [ApiSecretKey::class], function () use ($router) {
+$router->get('/test', [UserController::class, 'call']);
+$router->setVersion("1");
+
+$router->version(function () use ($router) {
 	$router->get('/test', [UserController::class, 'index']);
 
 	$router->get('/create', function (Request $request, Response $response) {
@@ -18,10 +23,14 @@ $router->group('/api', [ApiSecretKey::class], function () use ($router) {
 			->send();
 	});
 
-	$router->get('/', function (Request $request, Response $response) {
+	$router->get('/index', function (Request $request, Response $response) {
+		$payload = new Collection(JWT::decode($request->getBody('payload')));
+
 		$response->setStatusCode(200)
 			->addHeader('Content-Type', 'application/json')
-			->setBody(date("Y-m-d H:i:s", JWT::decode($request->getBody('payload'))["exp"]))
+			->setBody($payload->all())
 			->send();
 	}, [Middleware::class]);
-});
+}, [ApiSecretKey::class]);
+
+$router->run();
