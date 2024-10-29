@@ -14,5 +14,12 @@ if (!defined("APP_DIR")) {
 }
 
 if (!defined("CONFIG_DIR")) {
-	define("CONFIG_DIR", __DIR__.'/config');
+	define("CONFIG_DIR", __DIR__ . '/config');
+}
+
+if (!function_exists('collect')) {
+	function collect(array $array)
+	{
+		return new \ApiPHP\Additionals\Collection($array);
+	}
 }

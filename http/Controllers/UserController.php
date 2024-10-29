@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use ApiPHP\Additionals\Collection;
 use ApiPHP\Http\Request;
 use ApiPHP\Http\Response;
 use App\database\Models\User;
@@ -14,10 +15,12 @@ class UserController
 
 	public function index(Request $request, Response $response)
 	{
+		$collection = new Collection(JWT::decode($request->getBody('payload')));
+
 		$response->setStatusCode(200)
-			->addHeader("Content-Type", "application/json")
+			->addHeader("Content-Type", "application/text")
 			->setBody(
-				JWT::decode($request->getBody('payload'))
+				JWT::encode([$collection->username])
 			)
 			->send();
 	}

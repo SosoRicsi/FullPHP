@@ -9,10 +9,13 @@
 	},
 	"autoload": {
 		"files": [
-			"app/framework/functions.php"
+			"framework/functions.php"
 		],
 		"psr-4": {
-			"App\\": "app/public"
+			"ApiPHP\\": "framework",
+			"App\\": "app/public",
+			"App\\Middlewares\\": "http/Middlewares",
+			"App\\Controllers\\": "http/Controllers"
 		}
 	},
 	"scripts": {
@@ -22,5 +25,13 @@
 		"post-update-cmd": [
 			"php -r \"file_exists('.env') || copy('.env.example', '.env');\""
 		]
+	},
+	"require-dev": {
+		"pestphp/pest": "^3.5"
+	},
+	"config": {
+		"allow-plugins": {
+			"pestphp/pest-plugin": true
+		}
 	}
 }
