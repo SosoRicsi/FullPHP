@@ -16,3 +16,9 @@ if (!defined("APP_DIR")) {
 if (!defined("CONFIG_DIR")) {
 	define("CONFIG_DIR", __DIR__ . '/config');
 }
+
+if (!function_exists('web')) {
+	function web(string $key) {
+		return __DIR__."/../index/{$key}";
+	}
+}

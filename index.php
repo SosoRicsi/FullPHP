@@ -14,5 +14,5 @@ date_default_timezone_set(env('TIMEZONE'));
 App::setContainer(new \Aurora\Container);
 App::setRouter(new Router);
 
-require __DIR__ . '/web/routes.php';
-require __DIR__ . '/web/bootstrap.php';
+require web('routes.php');
+require web('bootstrap.php');
