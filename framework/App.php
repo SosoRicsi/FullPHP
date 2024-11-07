@@ -1,8 +1,8 @@
 <?php
 
-namespace ApiPHP;
+namespace Aurora;
 
-use ApiPHP\Http\Router;
+use Aurora\Http\Router;
 
 /**
  * Class App

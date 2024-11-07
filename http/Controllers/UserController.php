@@ -2,9 +2,9 @@
 
 namespace App\Controllers;
 
-use ApiPHP\Additionals\Collection;
-use ApiPHP\Http\Request;
-use ApiPHP\Http\Response;
+use Aurora\Additionals\Collection;
+use Aurora\Http\Request;
+use Aurora\Http\Response;
 use App\database\Models\User;
 use SosoRicsi\JWT\JWT;
 
@@ -15,7 +15,7 @@ class UserController
 
 	public function index(Request $request, Response $response)
 	{
-		$collection = new Collection(JWT::decode($request->getBody('payload')));
+		$collection = new Collection(JWT::decode($request->getBody()));
 
 		$response->setStatusCode(200)
 			->addHeader("Content-Type", "application/text")

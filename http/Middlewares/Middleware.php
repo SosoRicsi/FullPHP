@@ -7,7 +7,7 @@ namespace App\Middlewares;
 class Middleware
 {
 
-	public function handle(\ApiPHP\Http\Request $request, \ApiPHP\Http\Response $response)
+	public function handle(\Aurora\Http\Request $request, \Aurora\Http\Response $response)
 	{
 		if ($request->isMethod('GET')) {
 			return true;

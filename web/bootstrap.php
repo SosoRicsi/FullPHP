@@ -1,6 +1,6 @@
 <?php
 
-use ApiPHP\App;
+use Aurora\App;
 
 App::bind('Data', function () {
 	return print "alma";

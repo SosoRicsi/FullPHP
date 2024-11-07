@@ -1,6 +1,6 @@
 {
-	"name": "sosoricsi/api.php",
-	"description": "A simple php framwork for APIs. Please don't use it, this isn't 100% secure.",
+	"name": "sosoricsi/full.php",
+	"description": "A simple php framwork.",
 	"license": "MIT",
 	"require": {
 		"illuminate/database": "^11.27",
@@ -12,7 +12,7 @@
 			"framework/functions.php"
 		],
 		"psr-4": {
-			"ApiPHP\\": "framework",
+			"Aurora\\": "framework",
 			"App\\": "app/public",
 			"App\\Middlewares\\": "http/Middlewares",
 			"App\\Controllers\\": "http/Controllers"

@@ -1,14 +1,13 @@
 <?php
 
-use ApiPHP\Additionals\Collection;
-use ApiPHP\App;
+use Aurora\App;
 use SosoRicsi\JWT\JWT;
-use ApiPHP\Http\Request;
-use ApiPHP\Http\Response;
-use ApiPHP\Http\Router;
+use Aurora\Http\Request;
+use Aurora\Http\Response;
 use App\Controllers\UserController;
 use App\Middlewares\Middleware;
 use App\Middlewares\ApiSecretKey;
+use Aurora\Additionals\Collection;
 
 $router = App::router();
 
@@ -25,12 +24,10 @@ $router->version(function () use ($router) {
 	});
 
 	$router->get('/index', function (Request $request, Response $response) {
-		$payload = collect(JWT::decode($request->getBody('payload')));
+		$payload = new Collection(JWT::decode($request->getBody('payload')));
 
-		$response->setStatusCode(200)
-			->addHeader('Content-Type', 'application/json')
-			->setBody($payload->all())
-			->send();
+		print "<pre>";
+		print_r($payload);
 	}, [Middleware::class]);
 }, [ApiSecretKey::class]);
 

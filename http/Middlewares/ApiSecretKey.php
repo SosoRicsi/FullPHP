@@ -7,7 +7,7 @@ namespace App\Middlewares;
 class ApiSecretKey
 {
 
-	public function handle(\ApiPHP\Http\Request $request, \ApiPHP\Http\Response $response)
+	public function handle(\Aurora\Http\Request $request, \Aurora\Http\Response $response)
 	{
 		if ($request->getHeader('API_SECRET_KEY') === env('SECRET_KEY')) {
 			return true;
